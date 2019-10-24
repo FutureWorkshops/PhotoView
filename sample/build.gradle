@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.sdkVersion
+    compileSdkVersion 28
 
     defaultConfig {
         applicationId "uk.co.senab.photoview.sample"
         minSdkVersion 14
-        targetSdkVersion rootProject.ext.sdkVersion
+        targetSdkVersion 28
         versionCode 100
         versionName "1.0"
     }

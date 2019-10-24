@@ -29,7 +29,6 @@ import androidx.appcompat.widget.AppCompatImageView;
  * A zoomable ImageView. See {@link PhotoViewAttacher} for most of the details on how the zooming
  * is accomplished
  */
-@SuppressWarnings("unused")
 public class PhotoView extends AppCompatImageView {
 
     private PhotoViewAttacher attacher;
@@ -142,6 +141,11 @@ public class PhotoView extends AppCompatImageView {
         attacher.setRotationBy(rotationDegree);
     }
 
+    @Deprecated
+    public boolean isZoomEnabled() {
+        return attacher.isZoomEnabled();
+    }
+
     public boolean isZoomable() {
         return attacher.isZoomable();
     }
@@ -158,7 +162,7 @@ public class PhotoView extends AppCompatImageView {
         attacher.getDisplayMatrix(matrix);
     }
 
-    @SuppressWarnings("UnusedReturnValue") public boolean setDisplayMatrix(Matrix finalRectangle) {
+    public boolean setDisplayMatrix(Matrix finalRectangle) {
         return attacher.setDisplayMatrix(finalRectangle);
     }
 
